@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>MTA Login</title>
+</head>
+
+<body>
+    <main class="contenedor">
+        <div class="contenedor__logo">
+            <img src="../IMG/logotipo.jpg" alt="" class="contenedor__logo--logotipo">
+        </div>
+        <div class="contenedor__campos">            
+            <form class="contenedor__campos--formulario">
+                <h1 class="encabezado">Iniciar sesión</h1>
+                <div class="campos">
+                    <div class="campos__texto">
+                        <label class="campos__texto--label" for="">Usuario:</label>
+                        <input type="text" class="campos__texto--input" required="true">
+                    </div>
+                    <div class="campos__texto">
+                        <label class="campos__texto--label" for="">Password:</label>
+                        <input type="password" class="campos__texto--input" required="true">
+                    </div>
+                    <div class="campos__texto">
+                        <label class="campos__texto--label" for="">Rol de usuario</label>
+                        <select class="campos__texto--select" id="">
+                            <option value="0">--Seleccione un rol--</option>
+                        </select>
+                    </div> 
+                    <div class="campos__texto">
+                        <input class="boton" type="button" name="" value="Entrar">
+                    </div> 
+                    <div class="campos__texto">
+                        <p class="campos__texto--link"> Si no tienes cuenta <a class="link" href="registro.html">Registrarse</a></p>
+                    </div>                   
+                </div>
+                
+            </form>
+        </div>
+
+    </main>
+</body>
+
+</html>

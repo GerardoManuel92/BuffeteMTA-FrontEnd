@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    --color1: #43777D;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --gris: #ECECEC;
+
+    --fuentePrincipal: font-family: 'Inter', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/* F O R M U L A R I O      D E         L O G I N  */
+
+/* Encabezado */
+
+.encabezado {
+    font-size: 3rem;
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Contenedor*/
+
+@media (min-width : 800px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 95%;
+        height: 70rem;
+        gap: 2rem;
+    }
+}
+
+.contenedor__logo, .logo-registro {
+    background-color: var(--color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor__campos {
+    display: flex;
+    justify-content: center;    
+}
+
+@media (min-width : 800px) {
+    .contenedor__campos--formulario {    
+        width: 90%;
+    }
+}
+
+.campos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;    
+}
+
+.campos__texto {
+    display: grid;
+}
+
+.campos__texto--label,
+.campos__texto--input,
+.campos__texto--select {
+    font-size: 2.5rem;
+    gap: 2rem;
+}
+
+.campos__texto--input,
+.campos__texto--select{ 
+    border-style: none;   
+    border-radius: 1rem;
+    background-color: var(--gris);
+    padding: 1.5rem;
+}
+
+.boton{
+    padding: 2.5rem;
+    border-style: none;
+    border-radius: 1rem;
+    background-color: var(--color1); 
+    color: var(--blanco);
+    font-size: 2.5rem;
+    margin-top: 2rem;   
+}
+
+.campos__texto--link{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.link{
+    font-size: 2.8rem;    
+    color: var(--color1);
+    font-weight: bold;
+}
+
+.boton:hover,
+.link:hover{
+    cursor: pointer;   
+    color: var(--negro);
+}
+
+/* F O R M U L A R I O      D E       R E G I S T R O  */
+
+@media (min-width : 800px) {
+    .contenedor-registro{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        width: 100%;
+        height: 70rem;
+        gap: 2rem;
+    }
+
+    .logo-registro{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.logo-registro .contenedor__logo--logotipo{
+    height: 20rem;
+    width: 40rem;
+    position: relative;
+}
+
+.registro-campos{
+    display: grid;
+    justify-content: center;
+}
+
+@media (min-width : 768px) {
+    .registro-campos .campos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }    
+}
+
+@media (min-width : 1440px) {
+    .registro-campos .campos{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }    
+}
+
+.registro-campos .campos .campos__texto .boton{
+    padding: 1rem;
+}
+
+.registro-campos .link{
+    text-align: center;
+}
