@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Registro de Audiencias</title>
+</head>
+<header class="cabezal">
+    <div class="cabezal__logo">
+        <a href="menu.html"><img class="cabezal__logo--logo" src="../IMG/logotipo.png" alt="Logotipo"></a>
+    </div>
+    <div class="navegador__menu">
+        <ul class="menu-horizontal">
+            <li><a href="">Archivo</a>
+                <ul class="menu-vertical">
+                    <li><a class="navegador__menu--link" href="abogados.html">Abogados</a></li>
+                    <li><a class="navegador__menu--link" href="asesoria.html">Asesorias</a></li>
+                    <li><a class="navegador__menu--link" href="audiencia.html">Audiencia</a></li>
+                    <li><a class="navegador__menu--link" href="asuntos.html">Asuntos</a></li>
+                    <li><a class="navegador__menu--link" href="clientes.html">Clientes</a></li>
+                    <li><a class="navegador__menu--link" href="demandado.html">Demandados</a></li>
+                </ul>
+            </li>
+            <li><a class="navegador__menu--link" href="#">Datos</a>
+                <ul class="menu-vertical">
+                    <li><a class="navegador__menu--link" href="#">Consultas</a></li>
+                </ul>
+            </li>
+            <li><a class="navegador__menu--link" href="#">Extra</a>
+                <ul class="menu-vertical">
+                    <li><a class="navegador__menu--link" href="../index.html">Salir</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="navegador__sesion finsesion">
+        <a class="navegador__menu--link" href="../index.html">Cerrar sesion</a>
+    </div>    
+</header>
+<div class="cabezal__logo--titulo">
+        <p>Registro de Audiencias</p>
+</div>
+<body>
+    <main class="contenedor">
+        <div class="contenedor__formulario">
+            <form class="formulario" action="">
+                <fieldset>
+                    <legend class="legend"> Complete el formulario </legend>
+                    <div class="registro">
+                        <div class="registro__texto">
+                            <label class="registro__texto--label" for="">Lugar</label>
+                            <select class="registro__texto--select" name="" id="cmbLugar">
+                                <option value="">--Seleccionar lugar--</option>
+                                <option value="">Lugar 1</option>
+                                <option value="">Lugar 2</option>
+                            </select>
+                        </div>
+                        <div class="registro__texto">
+                            <label class="registro__texto--label" for="">Fecha</label>
+                            <input class="registro__texto--input" type="date" name="" id="txtFecha">
+                        </div>
+                        <div class="registro__texto">
+                            <label class="registro__texto--label" for="">Hora</label>
+                            <input class="registro__texto--input" type="time" name="" id="txtHora">
+                        </div>                        
+                        <div class="registro__texto">
+                            <label class="registro__texto--label" for="">Asunto</label>
+                            <select class="registro__texto--select" name="" id="cmbAsunto">
+                                <option value="">--Seleccionar id asunto--</option>
+                                <option value="">Asunto 1</option>
+                                <option value="">Asunto 2</option>
+                            </select>
+                        </div>
+                        <div class="registro__texto">
+                            <label class="registro__texto--label" for="">Resolución</label>
+                            <input class="registro__texto--input" type="text" name="" id="txtResolucion">
+                        </div>                       
+                    </div>
+                </fieldset>
+            </form>
+            <div class="registro__boton">
+                <button id="open" class="registro__boton--submit" type="submit">Registrar</button>
+            </div>
+            <div class="modal-container" id="modal-container">
+                <div class="modal">
+                    <div class="modal__content modal__content--header">
+                        <img src="../IMG/icono-mta.png" alt="">                        
+                    </div>
+                    <div class="modal__content">
+                        <img src="" alt="" id="icon">
+                        <p class="texto-modal"></p>
+                    </div>
+                    <button id="close" class="registro__boton--submit" type="submit">Cerrar</button>
+                </div>
+            </div>
+            <script src="../JS/modal-audiencia.js"></script>
+            <div class="contenedor__tabla">
+                <table class="tabla-registros">
+                    <tr class="tabla-registros--fila">
+                        <td class="tabla-registros--columna tabla-registros--columnatitle">Id audiencia</td>
+                        <td class="tabla-registros--columna tabla-registros--columnatitle">Lugar</td>
+                        <td class="tabla-registros--columna tabla-registros--columnatitle">Fecha</td>
+                        <td class="tabla-registros--columna tabla-registros--columnatitle">Hora</td>
+                        <td class="tabla-registros--columna tabla-registros--columnatitle">Resolución</td>
+                        <td class="tabla-registros--columna tabla-registros--columnatitle">Asunto</td>                        
+                    </tr>
+                    <tr class="tabla-registros--fila">
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>                        
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
