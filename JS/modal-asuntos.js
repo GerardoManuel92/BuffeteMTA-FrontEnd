@@ -45,14 +45,17 @@ open.addEventListener('click', () => {
         } else if (fechaT === null || fechaT === '') {
             document.querySelector('.texto-modal').innerHTML = "Debes ingresar una fecha de término";
             icono.src = "../IMG/error.png";
-        } else {
+        } else if(Date.parse(fechaT) < Date.parse(fechaI)){
+            document.querySelector('.texto-modal').innerHTML = "La fecha de término no debe ser menor a la fecha de inicio";
+            icono.src = "../IMG/error.png";
+        } 
+        else {
             if (date_regex.test(fechaI) || date_regex.test(fechaT)) {
                 document.querySelector('.texto-modal').innerHTML = "Registro guardado correctamente";
                 icono.src = "../IMG/correcto.png";
                 close.addEventListener('click', function (e) {
                     window.location = "../HTML/asuntos.html";
-                });
-            }
+                });            }
             else {
                 document.querySelector('.texto-modal').innerHTML = "Formato de fecha incorrecta";
                 icono.src = "../IMG/error.png";

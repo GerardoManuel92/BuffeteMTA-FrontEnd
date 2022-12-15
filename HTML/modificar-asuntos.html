@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Modificar Asesoria</title>
+</head>
+<header class="cabezalModif">
+    <div class="cabezal__logo">
+        <a href="menu.html"><img class="cabezal__logo--logo" src="../IMG/logotipo.png" alt="Logotipo"></a>           
+    </div>
+    <div class="cabezal__logo--titulo"><h1>Actualización de registro</h1></div>    
+</header>
+<body>
+    <main class="contenedorModificacion">
+        <div class="contenedor__formularioModificacion">
+            <form class="formulario" action="">
+                <fieldset>
+                    <legend class="legend"> Ingrese el nuevo valor en algún campo </legend>
+                    <div class="registro__texto">
+                        <label class="registro__texto--label" for="">Id asunto</label>
+                        <input class="registro__texto--input" type="text" name="" id="txtId">
+                    </div>
+                    <div class="registro__texto">
+                        <label class="registro__texto--label" for="">Cliente</label>
+                        <select class="registro__texto--select" name="" id="cmbCliente">
+                            <option value="">--Seleccionar cliente--</option>
+                            <option value="">Cliente 1</option>
+                            <option value="">Cliente 2</option>
+                        </select>
+                    </div>
+                    <div class="registro__texto">
+                        <label class="registro__texto--label" for="">Demandado</label>
+                        <select class="registro__texto--select" name="" id="cmbDemandado">
+                            <option value="">--Seleccionar demandado--</option>
+                            <option value="">Demandado 1</option>
+                            <option value="">Demandado 2</option>
+                        </select>
+                    </div>
+                    <div class="registro__texto">
+                        <label class="registro__texto--label" for="">Abogado</label>
+                        <select class="registro__texto--select" name="" id="cmbAbogado">
+                            <option value="">--Seleccionar abogado-</option>
+                            <option value="">Abogado 1</option>
+                            <option value="">Abogado 2</option>
+                        </select>
+                    </div>                        
+                    <div class="registro__texto">
+                        <label class="registro__texto--label" for="">Estado</label>
+                        <select class="registro__texto--select" name="" id="cmbEstado">
+                            <option value="">--Seleccionar estado-</option>
+                            <option value="">Estado 1</option>
+                            <option value="">Estado 2</option>
+                        </select>
+                    </div>
+                    <div class="registro__texto">
+                        <label class="registro__texto--label" for="">Tipo de asunto</label>
+                        <select class="registro__texto--select" name="" id="cmbAsunto">
+                            <option value="">--Seleccionar tipo asunto-</option>
+                            <option value="">Asunto 1</option>
+                            <option value="">Asunto 2</option>
+                        </select>
+                    </div> 
+                    <div class="registro__texto"></div>                       
+                    <div class="registro__texto">
+                        <label class="registro__texto--label" for="">Fecha inicio</label>
+                        <input class="registro__texto--input" type="date" name="" id="txtFechaInicio">
+                    </div>
+                    <div class="registro__texto">
+                        <label class="registro__texto--label" for="">Fecha final</label>
+                        <input class="registro__texto--input" type="date" name="" id="txtFechaFinal">
+                    </div>  
+                </fieldset>
+            </form>
+            <div class="registro__boton registro__botones">                
+                <button id="open" class="registro__boton--submit" type="submit">Modificar</button>  
+                <a href="../HTML/asuntos.html" class="registro__boton--submit">Salir</a>             
+            </div>             
+            <div class="modal-container" id="modal-container">
+                <div class="modal">
+                    <div class="modal__content modal__content--header">
+                        <img src="../IMG/icono-mta.png" alt="">
+                    </div>
+                    <div class="modal__content">
+                        <img src="" alt="" id="icon">
+                        <p class="texto-modal"></p>
+                    </div>
+                    <button id="close" class="registro__boton--submit" type="submit">Cerrar</button>
+                </div>
+            </div>
+            <script src="../JS/modal-asuntos.js"></script>                                 
+        </div>                
+    </main>    
+</body>
+</html>

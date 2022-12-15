@@ -63,6 +63,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 40rem;
+    margin: auto;
 }
 
 @media (min-width : 800px) {
@@ -292,6 +293,27 @@ body {
     }
 }
 
+.contenedorModificacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color1);
+    height: 100%;
+}
+
+.contenedor__formularioModificacion {    
+    background-color: var(--blanco);
+    border-radius: 1rem;
+    box-shadow: 5px 10px 8px 10px rgba(0, 0, 0, 0.7);
+}
+
+.contenedor__formularioModificacion fieldset {    
+    width: 70rem;
+    height: 100%;
+    margin-top: 2rem;
+   
+}
+
 @media (max-width : 900px) {
     .cabezal {
         display: flex;
@@ -299,10 +321,11 @@ body {
         justify-content: center;
         padding: 10rem;
     }
+    
 
     .cabezal__logo--logo {
         width: 15rem;
-    }
+    }    
 
     .finsesion {
         display: flex;
@@ -319,7 +342,21 @@ body {
 
     .navegador__menu--link {
         font-size: 2rem;
-    }
+    }    
+}
+
+.cabezalModif{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--color1);
+}
+
+.cabezalModif .cabezal__logo--titulo h1{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--blanco);
 }
 
 .cabezal__logo--logo {
@@ -370,6 +407,15 @@ body {
     flex-direction: column;
 }
 
+.registro__botones{
+    display: flex;
+    flex-direction: row;
+}
+.registro__botones a{
+    text-align: center;
+    text-decoration: none;
+}
+
 .registro__texto--label {
     font-size: 2rem;
 }
@@ -384,7 +430,8 @@ body {
     padding: 2rem;
     font-size: 2rem;
     margin: auto;
-    margin-top: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     border-radius: 1rem;
     border-style: none;
     background-color: var(--color1);
@@ -554,4 +601,13 @@ body {
     font-size: 3rem;
     color: var(--color1);
     margin: auto;
+}
+
+.tabla-registros--columna a{
+    text-decoration: none;
+}
+
+.tabla-registros--columna a:hover{
+    cursor: pointer;
+    color: var(--blanco);
 }

@@ -7,8 +7,7 @@ open.addEventListener('click', () => {
     
 
     const usuario = document.getElementById('txtUsuario').value;
-    const contraseña = document.getElementById('txtPassword').value;
-    const rol = document.getElementById('cmbRolUsuario').selectedIndex;
+    const contraseña = document.getElementById('txtPassword').value;    
     const icono = document.getElementById('icon');    
 
     if (usuario === '' && contraseña === '') {
@@ -21,12 +20,7 @@ open.addEventListener('click', () => {
     } else if (contraseña === '') {
         document.querySelector('.texto-modal').innerHTML = "Debes ingresar tu password";
         icono.src = "../IMG/error.png";
-    } else if (rol === null || rol === 0) {
-        document.querySelector('.texto-modal').innerHTML = "Debes seleccionar tu rol de usuario";
-        icono.src = "../IMG/error.png";
-        return 0;
-    }
-    else {
+    } else {
         document.querySelector('.texto-modal').innerHTML = "Autentificación correcta";
         icono.src = "../IMG/correcto.png";
 

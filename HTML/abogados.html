@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Registro de Abogados</title>
 </head>
 <header class="cabezal">
@@ -90,7 +91,7 @@
             <div class="modal-container" id="modal-container">
                 <div class="modal">
                     <div class="modal__content modal__content--header">
-                        <img src="../IMG/icono-mta.png" alt="">                        
+                        <img src="../IMG/icono-mta.png" alt="">
                     </div>
                     <div class="modal__content">
                         <img src="" alt="" id="icon">
@@ -110,6 +111,7 @@
                         <td class="tabla-registros--columna tabla-registros--columnatitle">Cédula</td>
                         <td class="tabla-registros--columna tabla-registros--columnatitle">RFC</td>
                         <td class="tabla-registros--columna tabla-registros--columnatitle">Id Grado</td>
+                        <td class="tabla-registros--columna tabla-registros--columnatitle" colspan="2">Acciones</td>
                     </tr>
                     <tr class="tabla-registros--fila">
                         <td class="tabla-registros--columna"></td>
@@ -119,6 +121,23 @@
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"><a href="modificar-abogado.html"><span class="material-symbols-outlined">
+                            edit_square
+                            </span></a></td>
+                        <td class="tabla-registros--columna"><a href="#"><span class="material-symbols-outlined">
+                            delete
+                            </span></a></td>
+                    </tr>                    
+                    <tr class="tabla-registros--fila">
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
                     </tr>
                     <tr class="tabla-registros--fila">
                         <td class="tabla-registros--columna"></td>
@@ -128,13 +147,6 @@
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
-                    </tr>
-                    <tr class="tabla-registros--fila">
-                        <td class="tabla-registros--columna"></td>
-                        <td class="tabla-registros--columna"></td>
-                        <td class="tabla-registros--columna"></td>
-                        <td class="tabla-registros--columna"></td>
-                        <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
                     </tr>
@@ -146,11 +158,13 @@
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
-                    </tr>
-                </table>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                    </tr>                    
+                </table>                
             </div>
-        </div>
-    </main>
+        </div>        
+    </main>    
 </body>
 
 </html>

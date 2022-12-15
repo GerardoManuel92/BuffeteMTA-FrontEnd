@@ -10,8 +10,7 @@ open.addEventListener('click', () => {
     const materno = document.getElementById('txtMaterno').value;
     const email = document.getElementById('txtEmail').value;
     const passw1 = document.getElementById('txtPassword1').value;
-    const passw2 = document.getElementById('txtPassword2').value;
-    const rol = document.getElementById('cmbRolUsuario').selectedIndex;
+    const passw2 = document.getElementById('txtPassword2').value;    
     const icono = document.getElementById('icon');
 
     if (nombre === '' && paterno === '' && materno === '' && email === '' && passw1 === '' && passw2 === '') {
@@ -36,12 +35,7 @@ open.addEventListener('click', () => {
         } else if (passw2 === '') {
             document.querySelector('.texto-modal').innerHTML = "Debes confirmar tu password";
             icono.src = "../IMG/error.png";
-        }
-        else if (rol === null || rol === 0) {
-            document.querySelector('.texto-modal').innerHTML = "Debes seleccionar un rol de usuario";
-            icono.src = "../IMG/error.png";
-            return 0;
-        }
+        }        
         else {
             if (passw2 !== passw1) {
                 document.querySelector('.texto-modal').innerHTML = "Los password no coinciden";
