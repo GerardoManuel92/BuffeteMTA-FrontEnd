@@ -30,7 +30,7 @@
             </li>
             <li><a class="navegador__menu--link" href="#">Datos</a>
                 <ul class="menu-vertical">
-                    <li><a class="navegador__menu--link" href="#">Consultas</a></li>
+                    <li><a class="navegador__menu--link" href="consultaRegistros.html">Consultas</a></li>
                 </ul>
             </li>
             <li><a class="navegador__menu--link" href="#">Extra</a>
@@ -129,9 +129,67 @@
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
-                        <td class="tabla-registros--columna"><a href="modificar-asesoria.html"><span class="material-symbols-outlined">
+                        <td class="tabla-registros--columna"><button onclick="window.modal.showModal();"><span
+                            class="material-symbols-outlined">
                             edit_square
-                            </span></a></td>
+                        </span></button>
+                    <dialog id="modal" class="modal-dialog">
+                        <div class="dialog-encabezado">
+                            <img src="../logotipo.png" alt="logo">
+                            <h1>Actualización de registro</h1>
+                        </div>
+                        <div class="dialog-contenido">
+                            <form class="formularioDialog" action="" id="formDialog">
+                                <fieldset>
+                                    <legend class="legend"> Ingrese el nuevo valor en algún campo </legend>
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Id asesoria</label>
+                                        <input class="dialogregistro__texto--input" type="text" name="" id="txtId" readonly>
+                                    </div>
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Asesor</label>
+                                        <select class="dialogregistro__texto--select" name="" id="cmbAsesor">
+                                            <option value="">--Seleccionar asesor--</option>
+                                            <option value="">Asesor1</option>
+                                            <option value="">Asesor2</option>
+                                        </select>
+                                    </div>
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Asesorado</label>
+                                        <select class="dialogregistro__texto--select" name="" id="cmbAsesorado">
+                                            <option value="">--Seleccionar asesorado--</option>
+                                            <option value="">Asesorado1</option>
+                                            <option value="">Asesorado2</option>
+                                        </select>
+                                    </div>
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Id asunto</label>
+                                        <select class="dialogregistro__texto--select" name="" id="cmbAsunto">
+                                            <option value="">--Seleccionar id asunto--</option>
+                                            <option value="">Asunto1</option>
+                                            <option value="">Asunto2</option>
+                                        </select>
+                                    </div>                        
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Tema</label>
+                                        <input class="dialogregistro__texto--input" type="text" name="" id="txtTema" required>
+                                    </div>                       
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Fecha</label>
+                                        <input class="dialogregistro__texto--input" type="date" name="" id="txtFecha" required>
+                                    </div> 
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Hora</label>
+                                        <input class="dialogregistro__texto--input" type="time" name="" id="txtHora" required>
+                                    </div> 
+                                </fieldset>
+                                <div class="dialogregistro__botones">
+                                    <input class="dialogregistro__boton--submit" type="submit" value="Registrar">
+                                    <button onclick="window.modal.close();" class="dialogregistro__boton--submit" type="submit">Cerrar</button>
+                                </div>                                       
+                            </form>                                                                     
+                        </div>
+                    </dialog></td>
                         <td class="tabla-registros--columna"><a href="#"><span class="material-symbols-outlined">
                             delete
                             </span></a></td>

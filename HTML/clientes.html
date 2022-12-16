@@ -30,7 +30,7 @@
             </li>
             <li><a class="navegador__menu--link" href="#">Datos</a>
                 <ul class="menu-vertical">
-                    <li><a class="navegador__menu--link" href="#">Consultas</a></li>
+                    <li><a class="navegador__menu--link" href="consultaRegistros.html">Consultas</a></li>
                 </ul>
             </li>
             <li><a class="navegador__menu--link" href="#">Extra</a>
@@ -139,9 +139,63 @@
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
-                        <td class="tabla-registros--columna"><a href="modificar-cliente.html"><span class="material-symbols-outlined">
+                        <td class="tabla-registros--columna"><button onclick="window.modal.showModal();"><span
+                            class="material-symbols-outlined">
                             edit_square
-                            </span></a></td>
+                        </span></button>
+                    <dialog id="modal" class="modal-dialog">
+                        <div class="dialog-encabezado">
+                            <img src="../logotipo.png" alt="logo">
+                            <h1>Actualización de registro</h1>
+                        </div>
+                        <div class="dialog-contenido">
+                            <form class="formularioDialog" action="" id="formDialog">
+                                <fieldset>
+                                    <legend class="legend"> Ingrese el nuevo valor en algún campo </legend>
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Id cliente</label>
+                                        <input class="dialogregistro__texto--input" type="text" name="" id="txtNombre">
+                                    </div>
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Nombre</label>
+                                        <input class="dialogregistro__texto--input" type="text" name="" id="txtNombre">
+                                    </div>
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Apellido Paterno</label>
+                                        <input class="dialogregistro__texto--input" type="text" name="" id="txtPaterno">
+                                    </div>
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Apellido Materno</label>
+                                        <input class="dialogregistro__texto--input" type="text" name="" id="txtMaterno">
+                                    </div>
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">CURP</label>
+                                        <input class="dialogregistro__texto--input" type="text" name="" id="txtCurp">
+                                    </div>
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Facebook</label>
+                                        <input class="dialogregistro__texto--input" type="text" name="" id="txtFacebook">
+                                    </div>
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Telefono</label>
+                                        <input class="dialogregistro__texto--input" type="tel" name="" id="txtTelefono">
+                                    </div>
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">RFC</label>
+                                        <input class="dialogregistro__texto--input" type="text" name="" id="txtRFC">
+                                    </div>
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Email</label>
+                                        <input class="dialogregistro__texto--input" type="email" name="" id="txtEmail">
+                                    </div> 
+                                </fieldset>
+                                <div class="dialogregistro__botones">
+                                    <input class="dialogregistro__boton--submit" type="submit" value="Registrar">
+                                    <button onclick="window.modal.close();" class="dialogregistro__boton--submit" type="submit">Cerrar</button>
+                                </div>                                       
+                            </form>                                                                     
+                        </div>
+                    </dialog></td>
                         <td class="tabla-registros--columna"><a href="#"><span class="material-symbols-outlined">
                             delete
                             </span></a></td> 

@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Registro de Abogados</title>
 </head>
 <header class="cabezal">
@@ -30,7 +31,7 @@
             </li>
             <li><a class="navegador__menu--link" href="#">Datos</a>
                 <ul class="menu-vertical">
-                    <li><a class="navegador__menu--link" href="#">Consultas</a></li>
+                    <li><a class="navegador__menu--link" href="consultaRegistros.html">Consultas</a></li>
                 </ul>
             </li>
             <li><a class="navegador__menu--link" href="#">Extra</a>
@@ -100,7 +101,7 @@
                     <button id="close" class="registro__boton--submit" type="submit">Cerrar</button>
                 </div>
             </div>
-            <script src="../JS/modal-abogado.js"></script>
+            <script src="../JS/modal-abogado.js"></script>            
             <div class="contenedor__tabla">
                 <table class="tabla-registros">
                     <tr class="tabla-registros--fila">
@@ -121,23 +122,74 @@
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
-                        <td class="tabla-registros--columna"><a href="modificar-abogado.html"><span class="material-symbols-outlined">
-                            edit_square
-                            </span></a></td>
+                        <td class="tabla-registros--columna"><button onclick="window.modal.showModal();"><span
+                                    class="material-symbols-outlined">
+                                    edit_square
+                                </span></button>
+                            <dialog id="modal" class="modal-dialog">
+                                <div class="dialog-encabezado">
+                                    <img src="../logotipo.png" alt="logo">
+                                    <h1>Actualización de registro</h1>
+                                </div>
+                                <div class="dialog-contenido">
+                                    <form class="formularioDialog" action="" id="formDialog">
+                                        <fieldset>
+                                            <legend class="legend"> Ingrese el nuevo valor en algún campo </legend>
+                                            <div class="registroModificacion">
+                                                <div class="dialogregistro__texto">
+                                                    <label class="dialogregistro__texto--label" for="">Id
+                                                        abogado</label>
+                                                    <input class="dialogregistro__texto--input" type="text" name=""
+                                                        id="txtId" readonly>
+                                                </div>
+                                                <div class="dialogregistro__texto">
+                                                    <label class="dialogregistro__texto--label" for="">Nombre</label>
+                                                    <input class="dialogregistro__texto--input" type="text" name=""
+                                                        id="txtNombre2" required>
+                                                </div>
+                                                <div class="dialogregistro__texto">
+                                                    <label class="dialogregistro__texto--label" for="">Apellido
+                                                        Paterno</label>
+                                                    <input class="dialogregistro__texto--input" type="text" name=""
+                                                        id="txtPaterno2" required>
+                                                </div>
+                                                <div class="dialogregistro__texto">
+                                                    <label class="dialogregistro__texto--label" for="">Apellido
+                                                        Materno</label>
+                                                    <input class="dialogregistro__texto--input" type="text" name=""
+                                                        id="txtMaterno2" required>
+                                                </div>
+                                                <div class="dialogregistro__texto">
+                                                    <label class="dialogregistro__texto--label" for="">RFC</label>
+                                                    <input class="dialogregistro__texto--input" type="text" name=""
+                                                        id="txtRFC2" required>
+                                                </div>
+                                                <div class="dialogregistro__texto">
+                                                    <label class="dialogregistro__texto--label" for="">Cédula</label>
+                                                    <input class="dialogregistro__texto--input" type="text" name=""
+                                                        id="txtCedula2" required>
+                                                </div>
+                                                <div class="dialogregistro__texto">
+                                                    <label class="dialogregistro__texto--label" for="">Grado</label>
+                                                    <select class="dialogregistro__texto--select" name=""
+                                                        id="cmbGrado2" required="true">
+                                                        <option value="0">--Seleccionar grado--</option>
+                                                        <option value="1">Licenciatura</option>
+                                                    </select>
+                                                </div>                                                                                        
+                                            </div>                                            
+                                        </fieldset>
+                                        <div class="dialogregistro__botones">
+                                            <input class="dialogregistro__boton--submit" type="submit" value="Registrar">
+                                            <button onclick="window.modal.close();" class="dialogregistro__boton--submit" type="submit">Cerrar</button>
+                                        </div>                                       
+                                    </form>                                                                     
+                                </div>
+                            </dialog>
+                        </td>
                         <td class="tabla-registros--columna"><a href="#"><span class="material-symbols-outlined">
-                            delete
-                            </span></a></td>
-                    </tr>                    
-                    <tr class="tabla-registros--fila">
-                        <td class="tabla-registros--columna"></td>
-                        <td class="tabla-registros--columna"></td>
-                        <td class="tabla-registros--columna"></td>
-                        <td class="tabla-registros--columna"></td>
-                        <td class="tabla-registros--columna"></td>
-                        <td class="tabla-registros--columna"></td>
-                        <td class="tabla-registros--columna"></td>
-                        <td class="tabla-registros--columna"></td>
-                        <td class="tabla-registros--columna"></td>
+                                    delete
+                                </span></a></td>
                     </tr>
                     <tr class="tabla-registros--fila">
                         <td class="tabla-registros--columna"></td>
@@ -160,11 +212,21 @@
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
-                    </tr>                    
-                </table>                
+                    </tr>
+                    <tr class="tabla-registros--fila">
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                        <td class="tabla-registros--columna"></td>
+                    </tr>
+                </table>
             </div>
-        </div>        
-    </main>    
+        </div>
+     </main>    
 </body>
-
 </html>

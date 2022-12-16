@@ -30,7 +30,7 @@
             </li>
             <li><a class="navegador__menu--link" href="#">Datos</a>
                 <ul class="menu-vertical">
-                    <li><a class="navegador__menu--link" href="#">Consultas</a></li>
+                    <li><a class="navegador__menu--link" href="consultaRegistros.html">Consultas</a></li>
                 </ul>
             </li>
             <li><a class="navegador__menu--link" href="#">Extra</a>
@@ -112,9 +112,35 @@
                     <tr class="tabla-registros--fila">
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
-                        <td class="tabla-registros--columna"><a href="modificar-demandadoMoral.html"><span class="material-symbols-outlined">
+                        <td class="tabla-registros--columna"><button onclick="window.modal2.showModal();"><span
+                            class="material-symbols-outlined">
                             edit_square
-                            </span></a></td>
+                        </span></button>
+                    <dialog id="modal2" class="modal-dialog">
+                        <div class="dialog-encabezado">
+                            <img src="../logotipo.png" alt="logo">
+                            <h1>Actualización de registro (Personas Morales)</h1>
+                        </div>
+                        <div class="dialog-contenido">
+                            <form class="formularioDialog" action="" id="formDialog">
+                                <fieldset>
+                                    <legend class="legend"> Ingrese el nuevo valor en algún campo </legend>
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Id demandado</label>
+                                        <input class="dialogregistro__texto--input" type="text" name="" id="txtId" readonly>
+                                    </div>
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Razón Social</label>
+                                        <input class="dialogregistro__texto--input" type="text" name="" id="txtRazon" required>
+                                    </div>                    
+                                </fieldset>
+                                <div class="dialogregistro__botones">
+                                    <input class="dialogregistro__boton--submit" type="submit" value="Registrar">
+                                    <button onclick="window.modal2.close();" class="dialogregistro__boton--submit" type="submit">Cerrar</button>
+                                </div>                                       
+                            </form>                                                                     
+                        </div>
+                    </dialog></td>
                         <td class="tabla-registros--columna"><a href="#"><span class="material-symbols-outlined">
                             delete
                             </span></a></td>                                                 
@@ -131,9 +157,44 @@
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>  
                         <td class="tabla-registros--columna"></td> 
-                        <td class="tabla-registros--columna"><a href="modificar-DemandadoFisico.html"><span class="material-symbols-outlined">
+                        <td class="tabla-registros--columna"><button onclick="window.modal1.showModal();"><span
+                            class="material-symbols-outlined">
                             edit_square
-                            </span></a></td>
+                        </span></button>
+                    <dialog id="modal1" class="modal-dialog">
+                        <div class="dialog-encabezado">
+                            <img src="../logotipo.png" alt="logo">
+                            <h1>Actualización de registro (Personas Físicas)</h1>
+                        </div>
+                        <div class="dialog-contenido">
+                            <form class="formularioDialog" action="" id="formDialog">
+                                <fieldset>
+                                    <legend class="legend"> Ingrese el nuevo valor en algún campo </legend>
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Id demandado</label>
+                                        <input class="dialogregistro__texto--input" type="text" name="" id="txtId">
+                                    </div>
+                                    <div class="dialogregistro__texto">
+                                        <label class="dialogregistro__texto--label" for="">Dirección</label>
+                                        <input class="dialogregistro__texto--input" type="text" name="" id="txtDireccion">
+                                    </div>
+                                    <div class="dialogregistro__texto">
+                                        <label for="" class="dialogregistro__texto--label">Tipo demandado</label>
+                                        <select class="dialogregistro__texto--select" name="" id="cmbTipo">
+                                            <option value="">--Seleccionar tipo--</option>
+                                            <option value="">Tipo A</option>
+                                            <option value="">Tipo B</option>
+                                            <option value="">Tipo C</option>
+                                        </select> 
+                                    </div>                    
+                                </fieldset>
+                                <div class="dialogregistro__botones">
+                                    <input class="dialogregistro__boton--submit" type="submit" value="Registrar">
+                                    <button onclick="window.modal1.close();" class="dialogregistro__boton--submit" type="submit">Cerrar</button>
+                                </div>                                       
+                            </form>                                                                     
+                        </div>
+                    </dialog></td>
                         <td class="tabla-registros--columna"><a href="#"><span class="material-symbols-outlined">
                             delete
                             </span></a></td>                                              
@@ -156,9 +217,62 @@
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
                         <td class="tabla-registros--columna"></td>
-                        <td class="tabla-registros--columna"><a href="modificar-Demandado.html"><span class="material-symbols-outlined">
+                        <td class="tabla-registros--columna"><button onclick="window.modal.showModal();"><span
+                            class="material-symbols-outlined">
                             edit_square
-                            </span></a></td>
+                        </span></button>
+                    <dialog id="modal" class="modal-dialog">
+                        <div class="dialog-encabezado">
+                            <img src="../logotipo.png" alt="logo">
+                            <h1>Actualización de registro (Demandados en general)</h1>
+                        </div>
+                        <div class="dialog-contenido">
+                            <form class="formularioDialog" action="" id="formDialog">
+                                <fieldset>
+                                    <legend class="legend"> Ingrese el nuevo valor en algún campo </legend>
+                                    <div class="dialogregistro">
+                                        <div class="dialogregistro__texto">
+                                            <label class="dialogregistro__texto--label" for="">Id demandado</label>
+                                            <input class="dialogregistro__texto--input" type="text" name="" id="txtId" readonly>
+                                        </div>
+                                        <div class="dialogregistro__texto">
+                                            <label class="dialogregistro__texto--label" for="">Nombre</label>
+                                            <input class="dialogregistro__texto--input" type="text" name="" id="txtNombre" required>
+                                        </div>
+                                        <div class="dialogregistro__texto">
+                                            <label class="dialogregistro__texto--label" for="">Apellido Paterno</label>
+                                            <input class="dialogregistro__texto--input" type="text" name="" id="txtPaterno" required>
+                                        </div>
+                                        <div class="dialogregistro__texto">
+                                            <label class="dialogregistro__texto--label" for="">Apellido Materno</label>
+                                            <input class="dialogregistro__texto--input" type="text" name="" id="txtMaterno" required>
+                                        </div>                        
+                                        <div class="dialogregistro__texto">
+                                            <label class="dialogregistro__texto--label" for="">Direccion</label>
+                                            <input class="dialogregistro__texto--input" type="text" name="" id="txtDireccion" required>
+                                        </div>
+                                        <div class="dialogregistro__texto">
+                                            <label class="dialogregistro__texto--label" for="">Tipo</label>
+                                            <select class="dialogregistro__texto--select" name="" id="cmbTipo">
+                                                <option value="">--Seleccionar tipo--</option>
+                                                <option value="">Tipo A</option>
+                                                <option value="">Tipo B</option>
+                                                <option value="">Tipo C</option>
+                                            </select>                            
+                                        </div>
+                                        <div class="dialogregistro__texto">
+                                            <label class="dialogregistro__texto--label" for="">Razón Social</label>
+                                            <input class="dialogregistro__texto--input" type="text" name="" id="txtRazon">
+                                        </div>                        
+                                    </div> 
+                                </fieldset>
+                                <div class="dialogregistro__botones">
+                                    <input class="dialogregistro__boton--submit" type="submit" value="Registrar">
+                                    <button onclick="window.modal.close();" class="dialogregistro__boton--submit" type="submit">Cerrar</button>
+                                </div>                                       
+                            </form>                                                                     
+                        </div>
+                    </dialog></td>
                         <td class="tabla-registros--columna"><a href="#"><span class="material-symbols-outlined">
                             delete
                             </span></a></td>                        
